@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs | Kavya Job Portal</title>
+    <link rel="stylesheet" href="jobs.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">💼 Kavya Job Portal</a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="jobs.html" class="active">Jobs</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="page-heading">
+            <p class="tagline">YOUR NEXT OPPORTUNITY</p>
+            <h1>Explore <span>Job Openings</span></h1>
+            <p>Find opportunities that match your skills and career goals.</p>
+        </section>
+
+        <section class="toolbar">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search jobs, companies, locations or skills..."
+            >
+
+            <button id="showFormBtn" class="btn">+ Add New Job</button>
+        </section>
+
+        <section id="jobFormSection" class="form-card" hidden>
+            <h2>Add a New Job</h2>
+
+            <form id="jobForm">
+                <div class="form-grid">
+                    <input id="jobId" placeholder="Job ID" required>
+                    <input id="title" placeholder="Title of Job" required>
+                    <input id="company" placeholder="Company" required>
+                    <input id="location" placeholder="Location" required>
+                    <input id="salary" placeholder="Salary" required>
+                    <input id="skills" placeholder="Skills" required>
+                    <label class="date-field">
+                        Interview Date
+                        <input id="interviewDate" type="date" required>
+                    </label>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn">Save Job</button>
+                    <button type="button" id="cancelBtn" class="btn secondary">
+                        Cancel
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <section class="table-card">
+            <div class="table-heading">
+                <h2>Available Jobs</h2>
+                <span id="jobCount">0 jobs</span>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Job_id</th>
+                            <th>Title of Job</th>
+                            <th>Company</th>
+                            <th>Location</th>
+                            <th>Salary</th>
+                            <th>Skills</th>
+                            <th>Interview date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="jobTableBody"></tbody>
+                </table>
+            </div>
+
+            <p id="emptyMessage" class="empty-message" hidden>
+                No jobs found. Try another search or add a new job.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Kavya Job Portal | All Rights Reserved</p>
+    </footer>
+
+    <script src="jobs.js"></script>
+</body>
+</html>

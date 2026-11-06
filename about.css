@@ -1,0 +1,172 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f9f7ff;
+    color: #282447;
+    line-height: 1.7;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background: white;
+    box-shadow: 0 3px 15px rgba(40, 25, 70, 0.08);
+}
+
+.logo {
+    color: #7025c7;
+    font-size: 23px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #38334f;
+    font-weight: 600;
+}
+
+nav a:hover,
+nav a.active {
+    color: #7025c7;
+}
+
+/* About Banner */
+.about-hero {
+    text-align: center;
+    padding: 75px 20px;
+    background: linear-gradient(120deg, #eee5ff, #fceefa);
+}
+
+.tagline {
+    color: #7025c7;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.about-hero h1 {
+    font-size: 42px;
+    margin: 12px 0;
+}
+
+.about-hero h1 span {
+    color: #922bd0;
+}
+
+.about-hero p:last-child {
+    color: #686580;
+}
+
+/* About Cards */
+.about-container {
+    max-width: 1150px;
+    margin: 50px auto;
+    padding: 0 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.about-card {
+    background: white;
+    padding: 30px 24px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 22px rgba(40, 25, 70, 0.07);
+    transition: 0.3s;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+}
+
+.about-icon {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.about-card h2 {
+    font-size: 21px;
+    margin-bottom: 12px;
+    color: #6427c5;
+}
+
+.about-card p {
+    color: #6d6882;
+    font-size: 15px;
+}
+
+/* Call to Action */
+.about-cta {
+    text-align: center;
+    padding: 50px 20px;
+    background: #eee7ff;
+}
+
+.about-cta h2 {
+    font-size: 30px;
+}
+
+.about-cta p {
+    color: #686580;
+    margin: 10px 0 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #6427c5;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #451b91;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #2c294d;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-hero h1 {
+        font-size: 32px;
+    }
+}

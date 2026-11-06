@@ -1,0 +1,250 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #282447;
+    background: #f8f7fc;
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background: white;
+    box-shadow: 0 3px 15px rgba(40, 25, 70, 0.08);
+}
+
+.logo {
+    color: #7025c7;
+    font-size: 23px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #38334f;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a:hover,
+nav a.active {
+    color: #7025c7;
+}
+
+.container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 35px 5%;
+}
+
+.page-heading {
+    text-align: center;
+    padding: 25px 0 35px;
+}
+
+.tagline {
+    color: #7025c7;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+.page-heading h1 {
+    font-size: 38px;
+    margin: 10px 0;
+}
+
+.page-heading h1 span {
+    color: #8c2bd0;
+}
+
+.page-heading p:last-child {
+    color: #77728f;
+}
+
+.toolbar {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.toolbar input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px;
+    border: 1px solid #ded9eb;
+    border-radius: 9px;
+    font-size: 15px;
+}
+
+.btn {
+    background: #6427c5;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #451b91;
+}
+
+.secondary {
+    background: #77728f;
+}
+
+.form-card,
+.table-card {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(40, 25, 70, 0.06);
+    margin-bottom: 25px;
+}
+
+.form-card h2,
+.table-heading h2 {
+    margin-bottom: 18px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.form-grid input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ded9eb;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.date-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: #68617d;
+    font-size: 13px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.table-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+#jobCount {
+    color: #7025c7;
+    background: #f1e8ff;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1000px;
+}
+
+thead {
+    background: #f0e9ff;
+}
+
+th,
+td {
+    padding: 14px 12px;
+    text-align: left;
+    border-bottom: 1px solid #eeeaf5;
+    font-size: 14px;
+}
+
+th {
+    color: #51259a;
+    white-space: nowrap;
+}
+
+tbody tr:hover {
+    background: #faf8ff;
+}
+
+.delete-btn {
+    background: #ffe8ec;
+    color: #c12845;
+    border: none;
+    border-radius: 6px;
+    padding: 7px 10px;
+    cursor: pointer;
+}
+
+.empty-message {
+    text-align: center;
+    color: #77728f;
+    padding: 25px 10px;
+}
+
+footer {
+    background: #2c294d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .toolbar {
+        flex-direction: column;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-heading h1 {
+        font-size: 30px;
+    }
+
+    .form-card,
+    .table-card {
+        padding: 16px;
+    }
+}
